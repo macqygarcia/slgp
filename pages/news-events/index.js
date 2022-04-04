@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { format } from 'date-fns'
+import Link from 'next/link'
 import { MdOutlineLocalFireDepartment } from 'react-icons/md'
 import { PageHeader } from '../../components/Header'
 import { getNewsEvents } from '../../graphcms/queries'
-import Link from 'next/link'
 
 export default function NewsEvents({ newsEvents }) {
   console.log(newsEvents)

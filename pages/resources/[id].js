@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import React from 'react'
 
 export default function Resource({ resource }) {
   if (!resource) {
