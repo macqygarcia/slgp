@@ -1,25 +1,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { format } from 'date-fns'
+
 import {
   MdArrowCircleDown,
   MdFavoriteBorder,
   MdOutlineVisibility
 } from 'react-icons/md'
 
-export default function Resource() {
+export default function Resource({ id, src, date, title }) {
   return (
-    <Link href="/resources/1" passHref>
+    <Link href={`/resources/${id}`} passHref>
       <li className="flex cursor-pointer flex-col items-start gap-2 ">
-        <Image src="/Gradient.jpg" height={533} width={800} alt="" />
+        <Image src={src} height={375} width={375} alt="" />
         <div className="space-y-2 p-2">
-          <span className="text-zinc-400">November 2012</span>
-          <h2 className="font-medium">
-            Assessment of Bottom-up Processes in Planning and Budgeting
-          </h2>
-          <p className="text-zinc-700">
-            Identify what particular processes in the BUB need ample time and
-            those that needs more flexibility and resources so that relevant...
-          </p>
+          <span className="text-zinc-400">
+            {format(Date.parse(date), 'MMMM yyyy')}
+          </span>
+          <h2 className="font-medium line-clamp-3">{title}</h2>
         </div>
         <div className="flex w-full items-center justify-around py-10">
           <div className="flex items-center justify-center gap-1">

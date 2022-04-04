@@ -9,7 +9,7 @@ import { outcomes, pillars } from '../../lib/staticData'
 
 export default function About() {
   return (
-    <div className="space-y-5 text-center">
+    <div className="w-full space-y-5 text-center">
       <PageHeader>About Us</PageHeader>
       <div className="py-10">
         <WidthSection>
@@ -37,12 +37,11 @@ export default function About() {
           </div>
         </WidthSection>
       </div>
-      <Section className="">
+      <Section>
         <SectionHeader>Outcome Areas</SectionHeader>
-        <WidthSection>
-          <div className="my-5 h-96 w-full animate-pulse bg-zinc-50" />
+        <div className="h-[30rem] w-full xl:h-[35rem]">
           <Slider list={outcomes} />
-        </WidthSection>
+        </div>
       </Section>
       <div className="mx-auto py-5 sm:max-w-md md:max-w-2xl lg:max-w-6xl">
         <SectionHeader>Pillars</SectionHeader>

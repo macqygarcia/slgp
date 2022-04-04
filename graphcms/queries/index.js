@@ -1,18 +1,45 @@
 import { gql } from 'graphql-request'
 import { graphcmsClient } from '../index'
 
-export const useRegions = () => {
-  return useQuery('regions', async () => {
-    const { regions } = await graphcmsClient.request(
-      gql`
-        query {
-          regions(where: { short_not: "National" }) {
-            id
-            short
-          }
+export async function getResources() {
+  const query = gql`
+    query {
+      resources {
+        id
+        title
+        publishedDate
+        views
+        likes
+        downloads
+        resourceImage {
+          url
         }
-      `
-    )
-    return regions
-  })
+      }
+    }
+  `
+
+  const { resources } = await graphcmsClient.request(query)
+  return resources
+}
+
+export async function getNewsEvents() {
+  const query = gql`
+    query {
+      newsEvents {
+        id
+        views
+        title
+        publishedDate
+        detail {
+          markdown
+        }
+        newsEventImage {
+          url
+        }
+      }
+    }
+  `
+
+  const { newsEvents } = await graphcmsClient.request(query)
+  return newsEvents
 }

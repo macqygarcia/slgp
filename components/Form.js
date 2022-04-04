@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Form() {
   return (
-    <form className="flex h-full flex-col gap-5 bg-white p-5 lg:p-10 ">
+    <form className="flex h-full flex-col gap-5 bg-white p-5 lg:mx-auto lg:max-w-xl lg:p-10">
       <div className="mb-6">
         <label
           htmlFor="email"
