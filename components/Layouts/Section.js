@@ -3,7 +3,7 @@ export const Section = ({ children }) => (
 )
 
 export const WidthSection = ({ children }) => (
-  <section className="sm:mx-auto sm:max-w-md md:max-w-xl xl:max-w-3xl">
+  <section className="sm:mx-auto sm:max-w-lg md:max-w-xl xl:max-w-3xl">
     {children}
   </section>
 )

@@ -3,7 +3,11 @@ module.exports = {
   theme: {
     extend: {
       transitionProperty: {
-        width: 'width'
+        width: 'width',
+        height: 'height'
+      },
+      zIndex: {
+        '-10': '-10'
       }
     }
   },

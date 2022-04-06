@@ -1,0 +1,33 @@
+  <div>
+      <div className="bg-red-200">
+        {list.map(item => (
+          <section
+            key={item.id}
+            className={`h-[20rem] ${
+              item.image.url ? 'animate-none' : 'animate-pulse'
+            }`}
+          >
+            {item.id === current && (
+              <>
+                <img
+                  src={item.image.url}
+                  alt={item.title}
+                  width="1250"
+                  height="375"
+                  layout="fill"
+                />
+
+                <section className="absolute flex h-full w-full items-center justify-between">
+                  <div className="cursor-pointer rounded-full bg-zinc-200/5 p-1">
+                    <MdChevronLeft className="text-zinc-100/50 lg:text-4xl " />
+                  </div>
+                  <div className="cursor-pointer rounded-full bg-zinc-200/5 p-1">
+                    <MdChevronRight className="text-zinc-100/50 lg:text-4xl" />
+                  </div>
+                </section>
+              </>
+            )}
+          </section>
+        ))}
+      </div>
+    </div>

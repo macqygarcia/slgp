@@ -6,7 +6,6 @@ import { PageHeader } from '../../components/Header'
 import { getNewsEvents } from '../../graphcms/queries'
 
 export default function NewsEvents({ newsEvents }) {
-  console.log(newsEvents)
   if (!newsEvents) {
     return null
   }
@@ -30,7 +29,7 @@ export default function NewsEvents({ newsEvents }) {
   )
 }
 
-const NewsEvent = ({ id, views, image, date, title }) => (
+export const NewsEvent = ({ id, views, image, date, title }) => (
   <Link href={`/resources/${id}`} passHref>
     <li className="flex cursor-pointer flex-col items-start gap-2 bg-[#efeff0] p-2 ">
       <Image src={image} height={533} width={800} alt="" />

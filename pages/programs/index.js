@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import { VscChevronRight } from 'react-icons/vsc'
 import { PageHeader } from '../../components/Header'
@@ -23,7 +23,7 @@ export default function Programs() {
       </div>
 
       <ul className="flex w-full flex-col items-center justify-center gap-1 md:grid md:grid-cols-2 md:gap-0 lg:px-3">
-        {programs.map(({ program, img }, index) => (
+        {programs.map(({ program }, index) => (
           <li className="w-full" key={index}>
             <section className="w-full bg-[#fafafa]">
               <div className="flex w-full flex-col items-center justify-center">

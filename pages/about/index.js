@@ -1,6 +1,6 @@
 import { LinkBtn } from '../../components/Buttons'
 import { PageHeader, SectionHeader } from '../../components/Header'
-import { Section, WidthSection } from '../../components/Layouts/Section'
+import { WidthSection } from '../../components/Layouts/Section'
 import { Slider } from '../../components/Slider'
 import Typhography from '../../components/Typhography'
 
@@ -13,7 +13,7 @@ export default function About() {
       <PageHeader>About Us</PageHeader>
       <div className="py-10">
         <WidthSection>
-          <div className="space-y-7">
+          <div className="space-y-7 p-3">
             <Typhography>
               In the past five years, the DILG through its Support for the Local
               Governance Program initiated interventions on improving local
@@ -37,24 +37,25 @@ export default function About() {
           </div>
         </WidthSection>
       </div>
-      <Section>
+      <div className="flex h-full flex-col items-center justify-center bg-[#fafafa] py-10">
         <SectionHeader>Outcome Areas</SectionHeader>
-        <div className="h-[30rem] w-full xl:h-[35rem]">
+        <div className="flex h-[30rem] w-full items-end justify-end xl:h-[35rem]">
           <Slider list={outcomes} />
         </div>
-      </Section>
-      <div className="mx-auto py-5 sm:max-w-md md:max-w-2xl lg:max-w-6xl">
+      </div>
+      <div className="mx-auto w-full py-5 sm:max-w-md md:max-w-2xl lg:max-w-6xl lg:py-16">
         <SectionHeader>Pillars</SectionHeader>
         <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:gap-7">
           {pillars.map((pillar, index) => (
             <div
-              className="group flex cursor-pointer flex-col items-center justify-center rounded p-5"
+              className="group flex cursor-pointer flex-col items-center justify-center rounded"
               key={index}
             >
-              <div className="h-96 w-96 animate-pulse bg-zinc-200" />
-              <span className="inline-block py-5 font-medium lg:text-lg">
-                {pillar.pillar}
-              </span>
+              <div className="flex h-[30rem] w-full animate-pulse items-center justify-center bg-zinc-200 p-3">
+                <span className="inline-block py-5 font-medium lg:text-lg">
+                  {pillar.pillar}
+                </span>
+              </div>
             </div>
           ))}
         </div>

@@ -14,7 +14,7 @@ export const PageHeader = ({ children }) => {
 }
 
 export const SectionHeader = ({ children }) => (
-  <h1 className="pb-5 text-3xl font-medium text-[#1d1d1f] md:text-4xl xl:text-5xl">
+  <h1 className="pb-5 text-3xl font-medium text-[#1d1d1f] md:text-4xl lg:pb-16 xl:text-5xl">
     {children}
   </h1>
 )
