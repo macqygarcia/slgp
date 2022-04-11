@@ -16,7 +16,7 @@ export default function Sidebar() {
   return (
     <div
       className={`w-full overflow-hidden bg-slate-50  text-zinc-800 transition-all duration-300 ease-out lg:hidden ${
-        isOPen ? 'z-300 fixed h-screen' : 'h-14'
+        isOPen ? 'fixed z-50 h-screen' : 'h-14'
       } `}
     >
       {/* LOGO DAGYAW DIALOGUES */}
