@@ -11,8 +11,8 @@ import {
 export default function Resource({ id, src, date, title }) {
   return (
     <Link href={`/resources/${id}`} passHref>
-      <li className="flex cursor-pointer flex-col items-start gap-2 ">
-        <Image src={src} height={375} width={375} alt="" />
+      <li className="flex w-full cursor-pointer flex-col items-center justify-center gap-2">
+        <Image src={src} height={375} width={375} alt={title} />
         <div className="space-y-2 p-2">
           <span className="text-zinc-400">
             {format(Date.parse(date), 'MMMM yyyy')}

@@ -11,7 +11,7 @@ export default function NewsEvents({ newsEvents }) {
   }
 
   return (
-    <div className="mb-20">
+    <div className="mb-20 p-5">
       <PageHeader>Latest News and Events</PageHeader>
       <ul className="mt-20 grid gap-10 sm:mx-auto sm:max-w-md md:max-w-full md:grid-cols-2 md:px-2 lg:grid-cols-3 xl:grid-cols-4 2xl:max-w-7xl 2xl:gap-5">
         {newsEvents.map(newsEvent => (
