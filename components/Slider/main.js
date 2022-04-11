@@ -1,14 +1,14 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import Image from 'next/image'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 
 export default function HomeSlides({ list }) {
-  const [current, setCurrent] = useState(0)
+  // const [current, setCurrent] = useState(0)
   // const length = list.length
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1)
-  }
+  // const nextSlide = () => {
+  //   setCurrent(current === length - 1 ? 0 : current + 1)
+  // }
 
   // const prevSlide = () => {
   //   setCurrent(current === 0 ? length - 1 : current - 1)
