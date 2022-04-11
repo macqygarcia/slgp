@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export const Slider = ({ list }) => {
   const [current, setCurrent] = useState(0)
   // const length = list.length
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1)
-  }
+  // const nextSlide = () => {
+  //   setCurrent(current === length - 1 ? 0 : current + 1)
+  // }
 
   // const prevSlide = () => {
   //   setCurrent(current === 0 ? length - 1 : current - 1)
@@ -15,16 +15,6 @@ export const Slider = ({ list }) => {
   if (!Array.isArray(list) || list.length <= 0) {
     return null
   }
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (current >= list.length) {
-  //       setCurrent(0)
-  //     }
-  //     nextSlide()
-  //   }, 1000)
-  //   return () => clearInterval(interval)
-  // }, [current])
 
   return (
     <div className="justfiy-between flex h-full w-full flex-col  ">
