@@ -22,7 +22,7 @@ export default function Home({ heroImages, newsEvents, resources }) {
         </section>
 
         {/* Masthead */}
-        <section className="flex w-full transform flex-col items-center justify-center gap-4 rounded border border-gray-200 bg-opacity-60 bg-clip-padding p-5 shadow backdrop-blur-3xl backdrop-filter sm:flex-row sm:justify-between sm:px-5 md:absolute md:left-1/2 md:top-1/2 md:mx-auto md:max-w-2xl md:-translate-y-1/2 md:-translate-x-1/2 lg:max-w-4xl lg:px-7">
+        <section className="flex w-full transform flex-col items-center justify-center gap-4 rounded border border-gray-200 bg-white/70 bg-opacity-60 bg-clip-padding py-10 shadow-zinc-400 backdrop-blur-3xl backdrop-filter sm:flex-row sm:justify-between sm:px-5 md:absolute md:left-1/2 md:top-1/2 md:mx-auto md:max-w-2xl md:-translate-y-1/2 md:-translate-x-1/2 lg:max-w-4xl lg:px-7">
           <div className="flex items-center gap-4 md:gap-7">
             <Image
               src="/dilg-logo.webp"
@@ -45,9 +45,6 @@ export default function Home({ heroImages, newsEvents, resources }) {
                 height="100"
                 width="100"
               />
-              <span className="inline-block font-medium sm:hidden">
-                Browse Archives
-              </span>
             </div>
           </Link>
           {/* Masthead */}

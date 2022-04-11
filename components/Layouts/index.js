@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '../Footer'
 import Navbar from '../Navigation/Navbar'
 import Sidebar from '../Navigation/Sidebar'
 
@@ -32,6 +33,7 @@ export default function Main({ children }) {
       {children}
 
       {/* Footer Goes here */}
+      <Footer />
     </>
   )
 }

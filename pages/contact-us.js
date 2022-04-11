@@ -9,7 +9,7 @@ export default function ContactUs() {
       <PageHeader>Contact Us</PageHeader>
       <div className="mt-20 flex flex-col items-center gap-5 xl:mx-auto xl:max-w-7xl">
         <section className="flex w-full flex-col items-center gap-5 lg:flex-row">
-          <section className="relative overflow-hidden bg-[#3E2093] py-16 px-5 text-center md:rounded-lg xl:w-3/4">
+          <section className="relative overflow-hidden bg-blue-800 py-16 px-5 text-center md:rounded-lg xl:w-3/4">
             <div className="flex flex-col justify-between">
               <h1 className="mb-16 text-2xl font-medium text-white">
                 Contact Information
@@ -20,13 +20,13 @@ export default function ContactUs() {
                     key={index}
                     className="flex flex-col items-center justify-center md:mx-auto md:max-w-md"
                   >
-                    <Icon className="text-2xl text-[#FA949D]" />
+                    <Icon className="text-2xl text-[#FCD116]" />
                     <address className=" text-zinc-200">{details}</address>
                   </section>
                 ))}
               </div>
             </div>
-            <div className="absolute -bottom-80 -right-48 z-0 opacity-50">
+            <div className="absolute -bottom-80 -right-48 z-0 opacity-20">
               <svg
                 width="485"
                 height="490"
@@ -34,8 +34,14 @@ export default function ContactUs() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle cx="250" cy="255" r="235" fill="#FA949D" />
-                <circle cx="80.5" cy="80.5" r="80.5" fill="#8758FA" />
+                <path
+                  d="M250 490C379.787 490 485 384.787 485 255C485 125.213 379.787 20 250 20C120.213 20 15 125.213 15 255C15 384.787 120.213 490 250 490Z"
+                  fill="#E41B00"
+                />
+                <path
+                  d="M80.5 161C124.959 161 161 124.959 161 80.5C161 36.0411 124.959 0 80.5 0C36.0411 0 0 36.0411 0 80.5C0 124.959 36.0411 161 80.5 161Z"
+                  fill="#1B16FC"
+                />
               </svg>
             </div>
           </section>
