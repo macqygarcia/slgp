@@ -1,8 +1,8 @@
 import Accordion from '../components/Accordion'
 import { PageHeader } from '../components/Header'
-import { faqs } from '../lib/faqsData'
+import { getFAQs } from '../graphcms/queries'
 
-export default function FAQs() {
+export default function FAQs({ faqs }) {
   return (
     <main className="text-center">
       <PageHeader>Frequently Asked Questions</PageHeader>
@@ -11,4 +11,13 @@ export default function FAQs() {
       </section>
     </main>
   )
+}
+
+export async function getServerSideProps() {
+  const faqs = await getFAQs()
+  return {
+    props: {
+      faqs
+    }
+  }
 }

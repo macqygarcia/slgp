@@ -61,3 +61,57 @@ export async function getNewsEvents() {
   const { newsEvents } = await graphcmsClient.request(query)
   return newsEvents
 }
+
+export async function getFAQs() {
+  const query = gql`
+    query {
+      faqs {
+        id
+        question
+        answer
+      }
+    }
+  `
+
+  const { faqs } = await graphcmsClient.request(query)
+  return faqs
+}
+
+export async function getTransparecyFiles() {
+  const query = gql`
+    query {
+      transparencies {
+        id
+        title
+        archives {
+          id
+          title
+          fileName
+          fileUrl {
+            url
+          }
+        }
+      }
+    }
+  `
+
+  const { transparencies } = await graphcmsClient.request(query)
+  return transparencies
+}
+
+export async function getPrograms() {
+  const query = gql`
+    query {
+      facades(where: { type: "program" }) {
+        id
+        name
+        image {
+          url
+        }
+      }
+    }
+  `
+
+  const { facades } = await graphcmsClient.request(query)
+  return facades
+}

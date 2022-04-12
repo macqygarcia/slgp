@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       transitionProperty: {
         width: 'width',
-        height: 'height'
+        height: 'height',
+        backgroundColor: 'backgroundColor'
       },
       zIndex: {
         '-10': '-10'
